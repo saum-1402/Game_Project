@@ -10,6 +10,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class MyGame extends Game {
+	public static final int V_WIDTH=400;
+	public static final int V_HEIGHT=400;
+
 	public SpriteBatch batch;
 	Texture img;
 	BitmapFont Font;
