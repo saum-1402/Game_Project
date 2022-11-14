@@ -10,7 +10,7 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-//edit done by Saumil
+//sanskar ka comment
 public class PlayScreen implements Screen {
     private MyGame game;
     Texture texture;
