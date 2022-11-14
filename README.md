@@ -1,3 +1,5 @@
 # Game_Project
 
-AP Game project it is yooooooooo
+Need to decide the classes and objects
+
+Need to decide on the bakcgroundimage and all the menu and stuff
