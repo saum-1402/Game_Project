@@ -18,14 +18,18 @@ public class PlayScreen implements Screen {
     private OrthographicCamera game_camera;
     private Viewport game_port;
     private HUD hud;
+    private Texture background_image;
     public PlayScreen(MyGame game){
         this.game = game;
         game_camera=new OrthographicCamera();
 
+        background_image = new Texture(Gdx.files.internal("loadingbackgroundimage.jpg"));
 //      game_port=new ScreenViewport(game_camera);                      //different configs for game screen
 //      game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
         game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
         hud = new HUD(game.batch);
+
+
     }
     @Override
     public void show() {
@@ -34,11 +38,14 @@ public class PlayScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1,0,0,1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+//        Gdx.gl.glClearColor(1,0,0,1);
+//        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
-        hud.stage.draw();
+//        hud.stage.draw();
+        game.batch.begin();
+        game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
+        game.batch.end();
     }
 
     @Override
