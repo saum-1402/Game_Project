@@ -6,19 +6,22 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.badlogic.gdx.Input.Keys;
 
 
 public class PlayScreen implements Screen {
-    private MyGame game;
-
+    final MyGame game;
     private OrthographicCamera game_camera;
     private Viewport game_port;
     private HUD hud;
     private Texture background_image;
+    SpriteBatch spriteBatch = new SpriteBatch();
     public PlayScreen(MyGame game){
         this.game = game;
         game_camera=new OrthographicCamera();
@@ -38,14 +41,20 @@ public class PlayScreen implements Screen {
 
     @Override
     public void render(float delta) {
-//        Gdx.gl.glClearColor(1,0,0,1);
-//        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
 
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
-//        hud.stage.draw();
+        hud.stage.draw();
         game.batch.begin();
         game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
+        game.font.draw(game.batch, "Welcome to Drop!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
+        game.font.draw(game.batch, "Click anywhere to begin!", MyGame.V_WIDTH/3, 2*MyGame.V_HEIGHT/3);
         game.batch.end();
+
+        if (Gdx.input.isTouched()) {
+            game.setScreen(new PlayScreen(game));
+            dispose();
+        }
     }
 
     @Override
