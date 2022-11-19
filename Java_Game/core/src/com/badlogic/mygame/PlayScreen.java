@@ -33,8 +33,8 @@ public class PlayScreen implements Screen {
         game_camera=new OrthographicCamera();
 
         //image assets
-        background_texture = new Texture(Gdx.files.internal("background_texture.jpeg"));
-        tank_image=new Texture(Gdx.files.internal("tank_image.jpeg"));
+        background_texture = new Texture(Gdx.files.internal("background_texture.jpg"));
+        tank_image=new Texture(Gdx.files.internal("tank_image.png"));
         //add surface
 
         //hud
