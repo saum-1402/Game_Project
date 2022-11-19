@@ -17,14 +17,13 @@ public class MyGame extends Game {
 	public static final int V_HEIGHT=208;
 
 	public SpriteBatch batch;
-	BitmapFont font;
-	Texture img;
+	public BitmapFont font;
 //	BitmapFont font;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+//		img = new Texture("badlogic.jpg");
 		this.font = new BitmapFont();
 		setScreen(new PlayScreen(this));
 	}
@@ -36,8 +35,8 @@ public class MyGame extends Game {
 	
 	@Override
 	public void dispose () {
-		batch.dispose();
-		img.dispose();
-		font.dispose();
+//		batch.dispose();
+//		img.dispose();
+//		font.dispose();
 	}
 }
