@@ -34,7 +34,7 @@ public class PlayScreen implements Screen {
 
         //image assets
         background_texture = new Texture(Gdx.files.internal("badlogic.jpg"));
-        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
+//        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
         //add surface
 
         //hud

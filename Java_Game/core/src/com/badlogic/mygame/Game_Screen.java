@@ -33,8 +33,8 @@ public class Game_Screen implements Screen {
         game_camera=new OrthographicCamera();
 
         //image assets
-        background_texture = new Texture(Gdx.files.internal("background_texture.jpg"));
-        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
+        background_texture = new Texture(Gdx.files.internal("tank_choose.png"));
+//        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
         //add surface
 
         //hud
@@ -62,7 +62,7 @@ public class Game_Screen implements Screen {
         game.batch.begin();
 
         game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
-        game.batch.draw(tank_image, 120,10, 30, 30);            //texture draw kiya hai
+//        game.batch.draw(tank_image, 120,10, 30, 30);            //texture draw kiya hai
 //        game.batch.draw(surface, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);   //surface hasn't been added
 
 //        game.font.draw(game.batch, "Welcome to Tank l;kWars!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
