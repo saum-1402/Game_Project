@@ -26,7 +26,7 @@ public class MainMenu implements Screen {
             game_camera=new OrthographicCamera();
 
             //image assets
-            background_image = new Texture(Gdx.files.internal("loadingbackgroundimage.jpg"));
+            background_image = new Texture(Gdx.files.internal("badlogic.jpg"));
             tank_image=new Texture(Gdx.files.internal("tank_image.png"));
             //add surface
 

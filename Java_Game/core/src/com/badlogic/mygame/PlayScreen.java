@@ -33,8 +33,8 @@ public class PlayScreen implements Screen {
         game_camera=new OrthographicCamera();
 
         //image assets
-        background_texture = new Texture(Gdx.files.internal("badlogic.jpg"));
-//        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
+        background_texture = new Texture(Gdx.files.internal("background_texture.jpg"));
+        tank_image=new Texture(Gdx.files.internal("tank_image.png"));           //tank ka texture
         //add surface
 
         //hud
@@ -61,24 +61,11 @@ public class PlayScreen implements Screen {
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
 
         game.batch.begin();
-//        hud.batch.draw();
         game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
-<<<<<<< HEAD
         game.batch.draw(tank_image, 120,10, 30, 30);
-
-=======
-//        game.batch.draw(tank_image, 120,10, 30, 30);            //texture draw kiya hai
->>>>>>> 770677b4f403d13dc1dd56bfb62ba6a9279090e3
-//        game.batch.draw(surface, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);   //surface hasn't been added
-
-        game.font.draw(game.batch, "Welcome to Tank Wars!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
-        game.font.draw(game.batch, "Click anywhere to begin!", MyGame.V_WIDTH/3, 2*MyGame.V_HEIGHT/3);
         game.batch.end();
 
-        if (Gdx.input.isTouched()) {
-            game.setScreen(new Game_Screen(game));
-            dispose();
-        }
+//
     }
 
     @Override
