@@ -23,7 +23,6 @@ public class MyGame extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-//		img = new Texture("badlogic.jpg");
 		this.font = new BitmapFont();
 		setScreen(new MainMenu(this));
 	}
