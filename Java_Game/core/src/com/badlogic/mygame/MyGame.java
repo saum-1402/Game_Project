@@ -25,7 +25,7 @@ public class MyGame extends Game {
 		batch = new SpriteBatch();
 //		img = new Texture("badlogic.jpg");
 		this.font = new BitmapFont();
-		setScreen(new PlayScreen(this));
+		setScreen(new MainMenu(this));
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package Scenes;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -19,6 +20,9 @@ public class HUD {
     private Integer health2;
 
     public HUD(SpriteBatch sb){
+        Pixmap pixmap = new Pixmap(100, 20, Pixmap.Format.RGBA8888);
+        pixmap.setColor(Color.RED);
+        pixmap.fill();
         health1=100;
         health2=100;
 

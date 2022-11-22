@@ -42,6 +42,7 @@ public class PlayScreen implements Screen {
 
         //add music
 
+        //for views
         // game_port=new ScreenViewport(game_camera);                      //different configs for game screen
         // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
         game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
@@ -58,11 +59,12 @@ public class PlayScreen implements Screen {
         ScreenUtils.clear(0, 0, 0.2f, 1);
         game_camera.update();
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
-//        hud.stage.draw();
-        game.batch.begin();
 
+        game.batch.begin();
+//        hud.batch.draw();
         game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
         game.batch.draw(tank_image, 120,10, 30, 30);
+
 //        game.batch.draw(surface, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);   //surface hasn't been added
 
 //        game.font.draw(game.batch, "Welcome to Tank Wars!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
