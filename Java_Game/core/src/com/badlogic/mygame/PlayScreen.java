@@ -64,6 +64,7 @@ public class PlayScreen implements Screen {
         game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
         game.batch.draw(tank_image, 120,10, 30, 30);
         game.batch.end();
+       // System.out.println(Gdx.input.getX());
 
 //
     }
