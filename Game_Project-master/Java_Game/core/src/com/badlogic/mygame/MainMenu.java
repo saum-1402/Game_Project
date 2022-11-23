@@ -82,7 +82,25 @@ public class MainMenu extends ApplicationAdapter implements Screen {
    }
     @Override
         public void show() {
-
+        Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
+        stage = new Stage(new ScreenViewport());
+        Button button2 = new TextButton("Text Button",mySkin,"small");
+        float col_width=10;
+        float row_height=10;
+        button2.setSize(col_width*4,row_height);
+            button2.setPosition(col_width*7,Gdx.graphics.getHeight()-row_height*3);
+            button2.addListener(new InputListener(){
+            @Override
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+                outputLabel.setText("Press a Button");
+            }
+            @Override
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                outputLabel.setText("Pressed Text Button");
+                return true;
+            }
+        });
+        stage.addActor(button2);
         }
 
         @Override
@@ -93,7 +111,8 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 
             game.batch.begin();
 //        hud.batch.draw();
-
+            stage.act();
+            stage.draw();
 //
 
 //        game.batch.draw(surface, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);   //surface hasn't been added
