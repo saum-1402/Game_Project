@@ -32,9 +32,6 @@ import static java.awt.Color.blue;
 
 
 public class MainMenu extends ApplicationAdapter implements Screen {
-
-
-
     final MyGame game;
     public Stage stage;
     private OrthographicCamera game_camera;
@@ -56,8 +53,6 @@ public class MainMenu extends ApplicationAdapter implements Screen {
             this.game = game;
             game_camera=new OrthographicCamera();
 
-
-
             //image assets
             background_image = new Texture(Gdx.files.internal("badlogic.jpg"));
             tank_image=new Texture(Gdx.files.internal("tank_image.png"));
@@ -69,9 +64,9 @@ public class MainMenu extends ApplicationAdapter implements Screen {
             //add music
 
             //for views
-            game_port=new ScreenViewport(game_camera);//different configs for game screen
+            ///game_port=new ScreenViewport(game_camera);//different configs for game screen
             // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
-            //game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
+            game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
 
 
 
