@@ -31,11 +31,8 @@ import static java.awt.Color.black;
 import static java.awt.Color.blue;
 
 
-public class MainMenu extends ApplicationAdapter implements Screen {
-
-
-
-    final MyGame game;
+public class MainMenu1 extends ApplicationAdapter implements Screen {
+    public MyGame game;
     public Stage stage;
     private OrthographicCamera game_camera;
     private Viewport game_port;
@@ -49,40 +46,43 @@ public class MainMenu extends ApplicationAdapter implements Screen {
     private TextButton buttonplay,buttonExit;
 
     private Label outputLabel;
-//    Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
+    //    Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
     private Skin skin;
 
-    public MainMenu(MyGame game){
-            this.game = game;
-            game_camera=new OrthographicCamera();
+    public MainMenu1(MyGame game){
+        this.game = game;
+        game_camera=new OrthographicCamera();
 
 
 
-            //image assets
-            background_image = new Texture(Gdx.files.internal("badlogic.jpg"));
-            tank_image=new Texture(Gdx.files.internal("tank_image.png"));
-            //add surface
+        //image assets
+        background_image = new Texture(Gdx.files.internal("badlogic.jpg"));
+        tank_image=new Texture(Gdx.files.internal("tank_image.png"));
+        //add surface
 
-            //hud
-            hud = new HUD(game.batch);
+        //hud
+        hud = new HUD(game.batch);
 
-            //add music
+        //add music
 
-            //for views
-            game_port=new ScreenViewport(game_camera);//different configs for game screen
-            // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
-            //game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
+        //for views
+        game_port=new ScreenViewport(game_camera);//different configs for game screen
+        // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
+        //game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
 
 
 
-        }
+    }
 
-   @Override
-       public void create () {
+    public MainMenu1() {
+    }
 
-   }
     @Override
-        public void show() {
+    public void create () {
+
+    }
+    @Override
+    public void show() {
         Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
 //        stage = new Stage(new ScreenViewport());
         stage = new Stage(new ScreenViewport());
@@ -91,8 +91,8 @@ public class MainMenu extends ApplicationAdapter implements Screen {
         int col_width = Gdx.graphics.getWidth() / 12;
         Button button2 = new TextButton("Start Playing",mySkin,"small");
         button2.setSize(col_width*4,row_height);
-            button2.setPosition(col_width*7,Gdx.graphics.getHeight()-row_height*3);
-            button2.addListener(new InputListener(){
+        button2.setPosition(col_width*7,Gdx.graphics.getHeight()-row_height*3);
+        button2.addListener(new InputListener(){
             @Override
             public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
                 System.out.println("i m up");
@@ -108,15 +108,15 @@ public class MainMenu extends ApplicationAdapter implements Screen {
             }
         });
         stage.addActor(button2);
-        }
+    }
 
-        @Override
-        public void render(float delta) {
-            game_camera.update();
-            game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+    @Override
+    public void render(float delta) {
+        game_camera.update();
+        game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
 
-            game.batch.begin();
-            game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
+        game.batch.begin();
+        game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
 
 
 
@@ -134,36 +134,36 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 //            game.setScreen(new PlayScreen(game));
 //            dispose();
 //        }
-        }
+    }
 
-        @Override
-        public void resize(int width, int height) {
-            game_port.update(width,height);
-        }
+    @Override
+    public void resize(int width, int height) {
+        game_port.update(width,height);
+    }
 
-        @Override
-        public void pause() {
+    @Override
+    public void pause() {
 
-        }
+    }
 
-        @Override
-        public void resume() {
+    @Override
+    public void resume() {
 
-        }
+    }
 
-        @Override
-        public void hide() {
+    @Override
+    public void hide() {
 
-        }
+    }
 
-        @Override
-        public void dispose() {
+    @Override
+    public void dispose() {
 //        background_texture.dispose();
 //        surface.dispose();
 //        tank_image.dispose();
-            stage.dispose();
+        stage.dispose();
 
-        }
     }
+}
 
 
