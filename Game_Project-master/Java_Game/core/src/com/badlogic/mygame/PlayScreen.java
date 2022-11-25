@@ -24,11 +24,8 @@ public class PlayScreen implements Screen {
     private Viewport game_port;
     private HUD hud;
     public Stage stage;
-    private Texture tank_image;     //texture declaration
 
-    private Texture surface;
     private Texture background_texture;
-    SpriteBatch spriteBatch = new SpriteBatch();
     public PlayScreen(MyGame game){
         this.game = game;
         game_camera=new OrthographicCamera();
@@ -94,7 +91,7 @@ public class PlayScreen implements Screen {
         stage.act();
         stage.draw();
         Gdx.input.setInputProcessor(stage);
-       // System.out.println(Gdx.input.getX());
+
 //        if (Gdx.input.isTouched()) {
 //            game.setScreen(new PlayScreen(game));
 //            dispose();
@@ -105,6 +102,7 @@ public class PlayScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
+
         game_port.update(width,height);
     }
 
@@ -125,9 +123,5 @@ public class PlayScreen implements Screen {
 
     @Override
     public void dispose() {
-//        background_texture.dispose();
-//        surface.dispose();
-//        tank_image.dispose();
-
     }
 }

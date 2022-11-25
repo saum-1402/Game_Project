@@ -24,9 +24,6 @@ public class tank_select_screen implements Screen {
     private Viewport game_port;
     private HUD hud;
     public Stage stage;
-    private Texture tank_image;     //texture declaration
-
-    private Texture surface;
     private Texture background_texture;
     SpriteBatch spriteBatch = new SpriteBatch();
     public tank_select_screen(MyGame game){
@@ -92,18 +89,10 @@ public class tank_select_screen implements Screen {
         game.batch.begin();
 
         game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
-//        game.batch.draw(tank_image, 120,10, 30, 30);
         game.batch.end();
         stage.act();
         stage.draw();
         Gdx.input.setInputProcessor(stage);
-//        // System.out.println(Gdx.input.getX());
-//        if (Gdx.input.isTouched()) {
-//            game.setScreen(new PlayScreen(game));
-//            dispose();
-//        }
-
-//
     }
 
     @Override

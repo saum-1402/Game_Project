@@ -37,26 +37,14 @@ public class MainMenu extends ApplicationAdapter implements Screen {
     private OrthographicCamera game_camera;
     private Viewport game_port;
     private HUD hud;
-    private Texture tank_image;
-
     private Texture surface;
     private Texture background_image;
-    SpriteBatch spriteBatch = new SpriteBatch();
-    private TextureAtlas atlas;
-    private TextButton buttonplay, buttonExit;
-
-    private Label outputLabel;
-    //    Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
-    private Skin skin;
-
     public MainMenu(MyGame game) {
         this.game = game;
         game_camera = new OrthographicCamera();
 
         //image assets
         background_image = new Texture(Gdx.files.internal("badlogic.jpg"));
-//        tank_image = new Texture(Gdx.files.internal("tank_image.png"));
-        //add surface
 
         //hud
         hud = new HUD(game.batch);
@@ -79,9 +67,7 @@ public class MainMenu extends ApplicationAdapter implements Screen {
     @Override
     public void show() {
         Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
-//        stage = new Stage(new ScreenViewport());
         stage = new Stage(new ScreenViewport());
-        int Help_Guides = 12;
         int row_height = Gdx.graphics.getWidth() / 12;
         int col_width = Gdx.graphics.getWidth() / 12;
         Button button2 = new TextButton("Start Playing", mySkin, "small");
@@ -90,15 +76,10 @@ public class MainMenu extends ApplicationAdapter implements Screen {
         button2.addListener(new InputListener() {
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-//                System.out.println("i m up");
-//                game.setScreen(new PlayScreen(game));
-//                outputLabel.setText("Press a Button");
-                return;
             }
 
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-//                outputLabel.setText("Pressed Text Button");
                 game.setScreen(new PlayScreen(game));
                 return true;
             }
@@ -111,18 +92,14 @@ public class MainMenu extends ApplicationAdapter implements Screen {
         button3.addListener(new InputListener() {
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-//                System.out.println("i m up");
-//                game.setScreen(new PlayScreen(game));
-//                outputLabel.setText("Press a Button");
-                return;
             }
 
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                 background_image.dispose();
-                surface.dispose();
-                tank_image.dispose();
+                background_image.dispose();
                 stage.dispose();
+//                tank_image.dispose();
+                surface.dispose();
 
                 return true;
 
@@ -143,11 +120,7 @@ public class MainMenu extends ApplicationAdapter implements Screen {
             game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
 
 
-
-//        game.batch.draw(surface, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);   //surface hasn't been added
-
         game.font.draw(game.batch, "Tank Wars!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
-//        game.font.draw(game.batch, "Click anywhere to begin!", MyGame.V_WIDTH/3, 2*MyGame.V_HEIGHT/3);
         stage.act();
         stage.draw();
 
@@ -182,9 +155,6 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 
         @Override
         public void dispose() {
-//        background_texture.dispose();
-//        surface.dispose();
-//        tank_image.dispose();
             stage.dispose();
 
         }
