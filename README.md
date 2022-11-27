@@ -1,5 +1,15 @@
 # Game_Project
 
-Need to decide the classes and objects
+need to make the ground
+need to make the tank move
+need to make the firing mechanism
+need to fill the player and tank class 
 
-Need to decide on the bakcgroundimage and all the menu and stuff
+NEED TO FIND A WAY TO CHANGE THE FIRING ANGLE OF THE TANKS MAYBE IT IS THERE IN THE MARIO GAME VIDEOS
+
+
+
+------BONUS CONTENT (CAN BE ONLY STARTED ONCE WE R DONE WITH THE ABOVE STUFF)
+
+SINCE IT IS ON THE PLANE GROUND, THE DAMAGE ON THE OPPONENT CAN BE INCREASED BY MAKING THE BOMB DROP FROM A GREATER HEIGHT
+
