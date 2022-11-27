@@ -51,10 +51,10 @@ public class PlayScreen implements Screen {
     public void show() {
         stage = new Stage(new ScreenViewport());
         int Help_Guides = 12;
-        Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
+        Skin mySkin = new Skin(Gdx.files.internal("skin/comic-ui.json"));
         int row_height = Gdx.graphics.getWidth() / 12;
         int col_width = Gdx.graphics.getWidth() / 12;
-        Button button2 = new TextButton("Pearl", mySkin, "small");
+        Button button2 = new TextButton("Pearl", mySkin, "default");
         button2.setSize(col_width * 7/2, row_height);
         button2.setPosition(col_width * 5, Gdx.graphics.getHeight() - row_height * 7);
         button2.addListener(new InputListener() {

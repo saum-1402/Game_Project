@@ -66,11 +66,11 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 
     @Override
     public void show() {
-        Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
+        Skin mySkin = new Skin(Gdx.files.internal("skin/comic-ui.json"));
         stage = new Stage(new ScreenViewport());
         int row_height = Gdx.graphics.getWidth() / 12;
         int col_width = Gdx.graphics.getWidth() / 12;
-        Button button2 = new TextButton("Start Playing", mySkin, "small");
+        Button button2 = new TextButton("Start Playing", mySkin, "default");
         button2.setSize(col_width * 4, row_height);
         button2.setPosition(col_width * 7, Gdx.graphics.getHeight() - row_height * 3);
         button2.addListener(new InputListener() {
@@ -86,7 +86,7 @@ public class MainMenu extends ApplicationAdapter implements Screen {
         });
         stage.addActor(button2);
 
-        Button button3 = new TextButton("Exit the game", mySkin, "small");
+        Button button3 = new TextButton("Exit the game", mySkin, "default");
         button3.setSize(col_width * 4, row_height);
         button3.setPosition(col_width * 7, Gdx.graphics.getHeight() - row_height * 6);
         button3.addListener(new InputListener() {
@@ -98,7 +98,6 @@ public class MainMenu extends ApplicationAdapter implements Screen {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 background_image.dispose();
                 stage.dispose();
-//                tank_image.dispose();
                 surface.dispose();
 
                 return true;
