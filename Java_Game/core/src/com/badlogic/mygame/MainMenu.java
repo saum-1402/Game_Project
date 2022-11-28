@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -37,6 +40,7 @@ public class MainMenu extends ApplicationAdapter implements Screen {
     private OrthographicCamera game_camera;
     private Viewport game_port;
     private HUD hud;
+
     private Texture surface;
     private Texture background_image;
     public MainMenu(MyGame game) {
@@ -48,6 +52,7 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 
         //hud
         hud = new HUD(game.batch);
+
 
         //add music
 

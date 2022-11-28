@@ -6,6 +6,9 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -30,10 +33,18 @@ public class map_select_2 implements Screen {
 //    private Texture tank_image2;
     private Texture surface;
     private Texture background_texture;
+    private TmxMapLoader mapLoader;
+    private TiledMap map;
+    private OrthogonalTiledMapRenderer renderer;
+
     SpriteBatch spriteBatch = new SpriteBatch();
     public map_select_2(MyGame game){
         this.game = game;
         game_camera=new OrthographicCamera();
+        //for views
+        // game_port=new ScreenViewport(game_camera);                      //different configs for game screen
+        // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
+        game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
 
         //image assets
         background_texture = new Texture(Gdx.files.internal("game_screen.jpg"));
@@ -45,12 +56,13 @@ public class map_select_2 implements Screen {
         //hud
         hud = new HUD(game.batch);
 
+        mapLoader=new TmxMapLoader();
+        map=mapLoader.load("ground.tmx");
+        renderer=new OrthogonalTiledMapRenderer(map);
+
+        game_camera.position.set(game_port.getWorldWidth()/2,game_port.getWorldHeight()/2,0);
         //add music
 
-        //for views
-        // game_port=new ScreenViewport(game_camera);                      //different configs for game screen
-        // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
-        game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
 
 
     }
@@ -58,38 +70,25 @@ public class map_select_2 implements Screen {
 
     @Override
     public void show() {
-        stage = new Stage(new ScreenViewport());
-        int Help_Guides = 12;
-//        Skin mySkin = new Skin(Gdx.files.internal("skin/glassy-ui.json"));
-//        int row_height = Gdx.graphics.getWidth() / 12;
-//        int col_width = Gdx.graphics.getWidth() / 12;
-//        Button button2 = new TextButton("Panzer", mySkin, "small");
-//        button2.setSize(col_width * 3, row_height);
-//        button2.setPosition(col_width * 5, Gdx.graphics.getHeight() - row_height * 7);
-//        button2.addListener(new InputListener() {
-//            @Override
-//            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-////                System.out.println("i m up");
-////                game.setScreen(new PlayScreen(game));
-////                outputLabel.setText("Press a Button");
-//                return;
-//            }
-//
-//            @Override
-//            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-////                outputLabel.setText("Pressed Text Button");
-////                game.setScreen(new PlayScreen(game));
-//                return true;
-//            }
-//        });
-//        stage.addActor(button2);
 
+    }
+
+    public void handleInput(float delta){
+        if(Gdx.input.isTouched()){
+            game_camera.position.x+=100*delta;
+
+        }
+    }
+    public void update(float delta){
+        handleInput(delta);
+        game_camera.update();
+        renderer.setView(game_camera);
     }
 
     @Override
     public void render(float delta) {
-        ScreenUtils.clear(0, 0, 0.2f, 1);
-        game_camera.update();
+        update(delta);
+        ScreenUtils.clear(0, 0, 0, 1);
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
 
         game.batch.begin();
@@ -100,6 +99,8 @@ public class map_select_2 implements Screen {
         game.batch.draw(healthbar,42 ,180, 100, 12);
         game.batch.draw(healthbar, 280,180, 100, 12);
         game.batch.end();
+        renderer.render();
+//        game_camera.update();
 //        stage.act();
 //        stage.draw();
         // System.out.println(Gdx.input.getX());
@@ -109,6 +110,7 @@ public class map_select_2 implements Screen {
 
     @Override
     public void resize(int width, int height) {
+
         game_port.update(width,height);
     }
 

@@ -6,6 +6,9 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -25,6 +28,7 @@ public class PlayScreen implements Screen {
     private HUD hud;
     public Stage stage;
 
+
     private Texture background_texture;
     public PlayScreen(MyGame game){
         this.game = game;
@@ -38,7 +42,11 @@ public class PlayScreen implements Screen {
         //hud
         hud = new HUD(game.batch);
 
+
+
         //add music
+
+
 
         //for views
         // game_port=new ScreenViewport(game_camera);                      //different configs for game screen
@@ -77,10 +85,13 @@ public class PlayScreen implements Screen {
 
     }
 
+
     @Override
     public void render(float delta) {
+
         ScreenUtils.clear(0, 0, 0.2f, 1);
-        game_camera.update();
+//        renderer.render();
+//        game_camera.update();
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
 
         game.batch.begin();
