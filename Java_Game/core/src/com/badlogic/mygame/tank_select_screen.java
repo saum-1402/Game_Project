@@ -2,6 +2,7 @@ package com.badlogic.mygame;
 
 import Scenes.HUD;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -62,7 +63,7 @@ public class tank_select_screen implements Screen {
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
 //                System.out.println("i m up");
 //                game.setScreen(new PlayScreen(game));
-                game.setScreen(new map_select_2(game));
+                game.setScreen(new GameScreen(game));
 //               outputLabel.setText("Press a Button");
                 return;
             }
@@ -71,7 +72,7 @@ public class tank_select_screen implements Screen {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
 //                outputLabel.setText("Pressed Text Button");
 //                game.setScreen(new PlayScreen(game));
-                game.setScreen(new map_select_2(game));
+                game.setScreen(new GameScreen(game));
                 return true;
 
             }
@@ -93,6 +94,8 @@ public class tank_select_screen implements Screen {
         stage.act();
         stage.draw();
         Gdx.input.setInputProcessor(stage);
+
+//            bucket.x -= 200 * Gdx.graphics.getDeltaTime();
     }
 
     @Override
