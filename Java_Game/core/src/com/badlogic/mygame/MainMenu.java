@@ -115,13 +115,13 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 
 
 
-        @Override
-        public void render(float delta) {
-            game_camera.update();
-            game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+    @Override
+    public void render(float delta) {
+        game_camera.update();
+        game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
 
-            game.batch.begin();
-            game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
+        game.batch.begin();
+        game.batch.draw(background_image, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
 
 
         game.font.draw(game.batch, "Tank Wars!", MyGame.V_WIDTH/3, MyGame.V_HEIGHT/3);
@@ -135,34 +135,34 @@ public class MainMenu extends ApplicationAdapter implements Screen {
 //            game.setScreen(new PlayScreen(game));
 //            dispose();
 //        }
-        }
-
-        @Override
-        public void resize(int width, int height) {
-            game_port.update(width,height);
-        }
-
-        @Override
-        public void pause() {
-
-        }
-
-        @Override
-        public void resume() {
-
-        }
-
-        @Override
-        public void hide() {
-
-        }
-
-        @Override
-        public void dispose() {
-            stage.dispose();
-
-        }
     }
+
+    @Override
+    public void resize(int width, int height) {
+        game_port.update(width,height);
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
+
+    @Override
+    public void dispose() {
+        stage.dispose();
+
+    }
+}
 
 
 

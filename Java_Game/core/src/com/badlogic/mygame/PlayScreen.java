@@ -2,6 +2,7 @@ package com.badlogic.mygame;
 
 import Scenes.HUD;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -102,6 +103,9 @@ public class PlayScreen implements Screen {
         stage.act();
         stage.draw();
         Gdx.input.setInputProcessor(stage);
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)){
+            game.setScreen(new playScreen2(game));
+        }
 
 //        if (Gdx.input.isTouched()) {
 //            game.setScreen(new PlayScreen(game));
