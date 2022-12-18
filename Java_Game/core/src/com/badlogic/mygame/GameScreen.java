@@ -1,4 +1,5 @@
 package com.badlogic.mygame;
+//  made it for collide for current position of tank
 
 import Scenes.HUD;
 import com.badlogic.gdx.Gdx;
@@ -112,6 +113,8 @@ public class GameScreen implements Screen {
             tank.x += 1;
         if (tank.x < 0)
             tank.x = 0;
+        if (tank.x> 220)
+            tank.x=220;
 //        game_camera.update();
 //        stage.act();
 //        stage.draw();
