@@ -1,5 +1,6 @@
 package com.badlogic.mygame;
 //  made it for collide for current position of tank
+//  this is pearl
 
 import Scenes.HUD;
 import com.badlogic.gdx.Gdx;
@@ -8,17 +9,27 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+// generate a terrain for tank game
+
 
 public class GameScreen implements Screen {
+
+    //box2d componenst
+    private World world;
+    private Box2DDebugRenderer b2dr;
+
     final MyGame game;
     Rectangle tank;
     private OrthographicCamera game_camera;
@@ -38,6 +49,27 @@ public class GameScreen implements Screen {
     SpriteBatch spriteBatch = new SpriteBatch();
     public GameScreen(MyGame game){
         this.game = game;
+
+//        //box2d things
+//        world = new World(new Vector2(0, 0), true);
+//        b2dr = new Box2DDebugRenderer();
+//        Bodydef bdef = new BodyDef();
+//        PolygonShape shape = new PolygonShape();
+//        FixtureDef fdef = new FixtureDef();
+//        Body body;
+//
+//        for (MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)) {
+//            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+//
+//            bdef.type = BodyDef.BodyType.StaticBody;
+//            bdef.position.set((rect.getX() + rect.getWidth() / 2) / MyGame.PPM, (rect.getY() + rect.getHeight() / 2) / MyGame.PPM);
+//
+//            body = world.createBody(bdef);
+//
+//            shape.setAsBox(rect.getWidth() / 2 / MyGame.PPM, rect.getHeight() / 2 / MyGame.PPM);
+//            fdef.shape = shape;
+//            body.createFixture(fdef);
+//        }
 
         // create a Rectangle to logically represent the tank
         tank = new Rectangle();
