@@ -114,23 +114,30 @@ public class GameScreen implements Screen {
     public void show() {
 
     }
-    private void createBox(float posX, float posY, float boxW, float boxH) {
+    private void createBox(float x, float y, float width, float height) {
+        // Create a body definition
         BodyDef bodyDef = new BodyDef();
-        bodyDef.type = BodyDef.BodyType.StaticBody;
-        bodyDef.position.set(posX, posY);
+        bodyDef.type = BodyDef.BodyType.DynamicBody;
+        bodyDef.position.set(x, y);
 
+// Create a body from the definition
         Body body = world.createBody(bodyDef);
 
+// Create a polygon shape
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(boxW / 2.f, boxH / 2.f);
+        shape.setAsBox(width / 2, height / 2);
 
+// Create a fixture from the shape
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
-        fixtureDef.density = 1f;
+        fixtureDef.density = 1.0f;
+        fixtureDef.friction = 0.5f;
+        fixtureDef.restitution = 0.5f;
+        body.createFixture(fixtureDef);
 
-        Fixture fixture = body.createFixture(fixtureDef);
-
+// Dispose of the shape
         shape.dispose();
+
     }
 
     public void handleInput(float delta){
