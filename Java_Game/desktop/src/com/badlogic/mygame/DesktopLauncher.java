@@ -3,6 +3,7 @@ package com.badlogic.mygame;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.mygame.MyGame;
+import com.badlogic.gdx.physics.box2d.*;
 
 
 public class DesktopLauncher {

@@ -6,6 +6,7 @@ import Scenes.HUD;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -56,7 +57,7 @@ public class GameScreen implements Screen {
 //        //box2d things
 
 //        b2dr = new Box2DDebugRenderer();
-//        Bodydef bdef = new BodyDef();
+//        BodyDef bdef = new BodyDef();
 //        PolygonShape shape = new PolygonShape();
 //        FixtureDef fdef = new FixtureDef();
 //        Body body;
@@ -102,7 +103,33 @@ public class GameScreen implements Screen {
         map=mapLoader.load("ground.tmx");
         renderer=new OrthogonalTiledMapRenderer(map);
 
-        game_camera.position.set(game_port.getWorldWidth()/2,game_port.getWorldHeight()/2,0);
+        world = new World(new Vector2(0, 0), true);
+        b2dr = new Box2DDebugRenderer();
+
+        BodyDef bdef = new BodyDef();
+        PolygonShape shape = new PolygonShape();
+        FixtureDef fdef = new FixtureDef();
+        Body body;
+//        b2dr.SHAPE_STATIC.set(1,1,1,1);
+        for (MapObject object : map.getLayers().get(1).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bdef.type = BodyDef.BodyType.StaticBody;
+//            bdef.position.set((rect.getX() + rect.getWidth() / 2) / MyGame.V_WIDTH, (rect.getY() + rect.getHeight() / 2) / MyGame.V_HEIGHT);
+            bdef.position.set(rect.getX() + rect.getWidth() / 2,rect.getY() + rect.getHeight() / 2);
+
+            body = world.createBody(bdef);
+
+            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
+//            shape.setAsBox(rect.getWidth() / 2 / MyGame.V_WIDTH, rect.getHeight() / 2 / MyGame.V_HEIGHT);
+            fdef.shape = shape;
+            body.createFixture(fdef);
+        }
+
+
+
+
+            game_camera.position.set(game_port.getWorldWidth()/2,game_port.getWorldHeight()/2,0);
         //add music
 
 
@@ -156,7 +183,12 @@ public class GameScreen implements Screen {
     public void render(float delta) {
         update(delta);
         ScreenUtils.clear(0, 0, 0, 1);
-        game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+
+        Gdx.gl.glClearColor(0,0,0,1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+//        game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+
+
 //        createBox(0,0,100,100);
 
         game.batch.begin();
@@ -168,7 +200,10 @@ public class GameScreen implements Screen {
         game.batch.draw(healthbar, 280,180, 100, 12);
 //        createBox(0,0,100,100);
         game.batch.end();
+
         renderer.render();
+        b2dr.render(world,game_camera.combined);
+
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT))
             tank.x -= 1;
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT))
@@ -177,6 +212,8 @@ public class GameScreen implements Screen {
             tank.x = 0;
         if (tank.x> 220)
             tank.x=220;
+
+
 //        game_camera.update();
 //        stage.act();
 //        stage.draw();
