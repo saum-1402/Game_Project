@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
@@ -20,6 +21,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.badlogic.gdx.math.Vector2;
 
 // generate a terrain for tank game
 
@@ -49,9 +51,10 @@ public class GameScreen implements Screen {
     SpriteBatch spriteBatch = new SpriteBatch();
     public GameScreen(MyGame game){
         this.game = game;
-
-//        //box2d things
 //        world = new World(new Vector2(0, 0), true);
+//        createBox(0,0,100,100);
+//        //box2d things
+
 //        b2dr = new Box2DDebugRenderer();
 //        Bodydef bdef = new BodyDef();
 //        PolygonShape shape = new PolygonShape();
@@ -111,6 +114,24 @@ public class GameScreen implements Screen {
     public void show() {
 
     }
+    private void createBox(float posX, float posY, float boxW, float boxH) {
+        BodyDef bodyDef = new BodyDef();
+        bodyDef.type = BodyDef.BodyType.StaticBody;
+        bodyDef.position.set(posX, posY);
+
+        Body body = world.createBody(bodyDef);
+
+        PolygonShape shape = new PolygonShape();
+        shape.setAsBox(boxW / 2.f, boxH / 2.f);
+
+        FixtureDef fixtureDef = new FixtureDef();
+        fixtureDef.shape = shape;
+        fixtureDef.density = 1f;
+
+        Fixture fixture = body.createFixture(fixtureDef);
+
+        shape.dispose();
+    }
 
     public void handleInput(float delta){
         if(Gdx.input.isTouched()){
@@ -129,6 +150,7 @@ public class GameScreen implements Screen {
         update(delta);
         ScreenUtils.clear(0, 0, 0, 1);
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+//        createBox(0,0,100,100);
 
         game.batch.begin();
 //        int x=60;
@@ -137,6 +159,7 @@ public class GameScreen implements Screen {
         game.batch.draw(tank_image2, 260,15, 60, 60);
         game.batch.draw(healthbar,42 ,180, 100, 12);
         game.batch.draw(healthbar, 280,180, 100, 12);
+//        createBox(0,0,100,100);
         game.batch.end();
         renderer.render();
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT))
