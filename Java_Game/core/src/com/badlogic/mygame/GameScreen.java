@@ -4,6 +4,7 @@ package com.badlogic.mygame;
 //sanskar ka edit
 
 import Scenes.HUD;
+import Sprites.Tank;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -50,9 +51,12 @@ public class GameScreen implements Screen {
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
 
+    private Tank player;
+
     SpriteBatch spriteBatch = new SpriteBatch();
     public GameScreen(MyGame game){
         this.game = game;
+
 //        world = new World(new Vector2(0, 0), true);
 //        createBox(0,0,100,100);
 //        //box2d things
@@ -88,7 +92,7 @@ public class GameScreen implements Screen {
         //for views
         // game_port=new ScreenViewport(game_camera);                      //different configs for game screen
         // game_port=new StretchViewport(800,400,game_camera);                 //different configs for game screen
-        game_port=new FitViewport(MyGame.V_WIDTH,MyGame.V_HEIGHT,game_camera);  //different configs for game screen
+        game_port=new FitViewport(MyGame.V_WIDTH/MyGame.PPM,MyGame.V_HEIGHT/MyGame.PPM,game_camera);  //different configs for game screen
 
         //image assets
         background_texture = new Texture(Gdx.files.internal("game_screen.jpg"));
@@ -102,9 +106,9 @@ public class GameScreen implements Screen {
 
         mapLoader=new TmxMapLoader();
         map=mapLoader.load("ground.tmx");
-        renderer=new OrthogonalTiledMapRenderer(map);
+        renderer=new OrthogonalTiledMapRenderer(map,1/MyGame.PPM);
 
-        world = new World(new Vector2(0, 0), true);
+        world = new World(new Vector2(0, -10/MyGame.PPM), true);
         b2dr = new Box2DDebugRenderer();
 
         BodyDef bdef = new BodyDef();
@@ -116,22 +120,24 @@ public class GameScreen implements Screen {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
             bdef.type = BodyDef.BodyType.StaticBody;
-//            bdef.position.set((rect.getX() + rect.getWidth() / 2) / MyGame.V_WIDTH, (rect.getY() + rect.getHeight() / 2) / MyGame.V_HEIGHT);
-            bdef.position.set(rect.getX() + rect.getWidth() / 2,rect.getY() + rect.getHeight() / 2);
-
+            bdef.position.set((rect.getX() + rect.getWidth() / 2) / MyGame.PPM, (rect.getY() + rect.getHeight() / 2) / MyGame.PPM);
+//            bdef.position.set(rect.getX() + rect.getWidth() / 2,rect.getY() + rect.getHeight() / 2);
+//
             body = world.createBody(bdef);
 
-            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
-//            shape.setAsBox(rect.getWidth() / 2 / MyGame.V_WIDTH, rect.getHeight() / 2 / MyGame.V_HEIGHT);
+//            shape.setAsBox(rect.getWidth() / 2, rect.getHeight() / 2);
+            shape.setAsBox(rect.getWidth() / 2 / MyGame.PPM, rect.getHeight() / 2 / MyGame.PPM);
             fdef.shape = shape;
             body.createFixture(fdef);
         }
+        World world1 = new World(new Vector2(2, -10), true);
+        player=new Tank(world);
 
 
 
 
             game_camera.position.set(game_port.getWorldWidth()/2,game_port.getWorldHeight()/2,0);
-        //add music
+
 
 
 
@@ -173,9 +179,17 @@ public class GameScreen implements Screen {
             game_camera.position.x+=100*delta;
 
         }
+        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT) && player.b2body.getLinearVelocity().x <= 2){
+            player.b2body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2body.getWorldCenter(), true);
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.LEFT) && player.b2body.getLinearVelocity().x >= -2){
+            player.b2body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2body.getWorldCenter(), true);}
     }
     public void update(float delta){
         handleInput(delta);
+        world.step(1/60f,6,2);
+        game_camera.position.x=player.b2body.getPosition().x;
+        player.update(delta);
         game_camera.update();
         renderer.setView(game_camera);
     }
@@ -193,13 +207,15 @@ public class GameScreen implements Screen {
 //        createBox(0,0,100,100);
 
         game.batch.begin();
-//        int x=60;
-        game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
-        game.batch.draw(tank_image, tank.x,7, 70, 70);
-        game.batch.draw(tank_image2, 260,15, 60, 60);
-        game.batch.draw(healthbar,42 ,180, 100, 12);
-        game.batch.draw(healthbar, 280,180, 100, 12);
-//        createBox(0,0,100,100);
+////        int x=60;
+//        game.batch.draw(background_texture, 0,0, MyGame.V_WIDTH, MyGame.V_HEIGHT);
+//        game.batch.draw(tank_image, tank.x,7, 70, 70);
+//        game.batch.draw(tank_image2, 260,15, 60, 60);
+//        game.batch.draw(healthbar,42 ,180, 100, 12);
+//        game.batch.draw(healthbar, 280,180, 100, 12);
+////        createBox(0,0,100,100);
+//        player.draw(game.batch);
+        game.batch.draw(player.getTexture(),player.b2body.getPosition().x,player.b2body.getPosition().y,40,40);
         game.batch.end();
 
         renderer.render();
