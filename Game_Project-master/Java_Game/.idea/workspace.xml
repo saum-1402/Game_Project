@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="736dac41-59f4-4c6c-b5c9-2539aec08687" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/Game_Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/Destroyed city landscape background vector image on VectorStock.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/Destroyed residential neighborhood concept vector image on VectorStock.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/Earthquake destroyed city background vector image on VectorStock.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/Game Boy GBC - Batman Return of the Joker - Tank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/My project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/My project1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/PC Computer - Battalion Nemesis - Flak Tank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/PC Computer - Star Wars Galactic Battlegrounds - Heavy Hover Tank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/Tank_select.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/background_texture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/background_texture1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/ezgif.com-gif-maker (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/health.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/healthbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/image1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/jpg2png.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/loadingbackgroundimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/map2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/map_selection_menu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/pngwing.com (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/pngwing.com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/comic-ui.atlas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/comic-ui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/comic-ui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/font-button-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/font-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/skin/font-title-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tank.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tank_choose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tank_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/360_F_411453165_fuHPfG0vfiaz9UHj2lT4u7GT4dXbTDiy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/My project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/My project1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/My project3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/My project4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/My project5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Game Assets/tanks/gdx-skins-master.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game_Project-master/.idea/Game_Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/Tank_select.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/ashjjagdia.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/background_texture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/badlogic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/game_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/healthbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/map1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/map_selection_menu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/comic-ui.atlas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/comic-ui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/comic-ui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/font-button-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/font-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/skin/font-title-export.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/tank_choose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/tank_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/assets/tank_image_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/Scenes/HUD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/MainMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/MyGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/PlayScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/map_select_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/core/src/com/badlogic/mygame/tank_select_screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/desktop/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/desktop/src/com/badlogic/mygame/DesktopLauncher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Java_Game/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Screenshots.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UML_CASE_diagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UML_Class_diagram.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Game_Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/Destroyed city landscape background vector image on VectorStock.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/Destroyed residential neighborhood concept vector image on VectorStock.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/Earthquake destroyed city background vector image on VectorStock.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/Game Boy GBC - Batman Return of the Joker - Tank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/My project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/My project1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/PC Computer - Battalion Nemesis - Flak Tank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/PC Computer - Star Wars Galactic Battlegrounds - Heavy Hover Tank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/Tank_select.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/background_texture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/background_texture1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/ezgif.com-gif-maker (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/health.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/healthbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/image1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/jpg2png.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/loadingbackgroundimage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/map2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/map_selection_menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/pngwing.com (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/pngwing.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/comic-ui.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/comic-ui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/comic-ui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/font-button-export.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/font-export.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/skin/font-title-export.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tank.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tank_choose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tank_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/360_F_411453165_fuHPfG0vfiaz9UHj2lT4u7GT4dXbTDiy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/My project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/My project1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/My project3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/My project4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/My project5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game Assets/tanks/gdx-skins-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Tank_select.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ashjjagdia.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/background_texture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/badlogic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/game_screen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/healthbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map_selection_menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/skin/font-export.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tank_choose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tank_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tank_image_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/Scenes/HUD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/MainMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/MyGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/PlayScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/map_select_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/tank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/badlogic/mygame/tank_select_screen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/src/com/badlogic/mygame/DesktopLauncher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Screenshots.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2IXgiFrkF64OB0cBRyeVNgu6S9c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/sansk/Desktop/AP_Project/Game_Project/Game_Project-master/Java_Game"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="736dac41-59f4-4c6c-b5c9-2539aec08687" name="Changes" comment="" />
+      <created>1670333467715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670333467715</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
